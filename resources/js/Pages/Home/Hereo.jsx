@@ -96,8 +96,18 @@ export default function Hereo() {
                                     onChange={e => setData('location', e.target.value)}
                                 >
                                     <option value="">Ville</option>
-                                    <option value="downtown">Downtown</option>
-                                    <option value="waterfront">Waterfront</option>
+                                    <option value="Yaounde">Yaoundé</option>
+                                    <option value="Douala">Douala</option>
+                                    <option value="Limbe">Limbe</option>
+                                    <option value="Buea">Buea</option>
+                                    <option value="Bertoua">Bertoua</option>
+                                    <option value="Kribi">Kribi</option>
+                                    <option value="Bamenda">Bamenda</option>
+                                    <option value="Maroua">Maroua</option>
+                                    <option value="Garoua">Garoua</option>
+                                    <option value="Ngaoundere">Ngaoundéré</option>
+                                    <option value="Bafoussam">Bafoussam</option>
+                                    <option value="Etoudi">Etoudi</option>
                                 </select>
                             </div>
                             <div>
@@ -107,8 +117,17 @@ export default function Hereo() {
                                     onChange={e => setData('locality', e.target.value)}
                                 >
                                     <option value="">Quartier</option>
-                                    <option value="villa">Villa</option>
-                                    <option value="penthouse">Penthouse</option>
+                                    <option value="Bastos">Bastos</option>
+                                    <option value="Emana">Emana</option>
+                                    <option value="Essos">Essos</option>
+                                    <option value="Omnissport">Omnisport</option>
+                                    <option value="NgoaEklle">Ngoa-Ekéllé</option>
+                                    <option value="Soa">Soa</option>
+                                    <option value="Nkolmesseng">Nkolmesseng</option>
+                                    <option value="Odza">Odza</option>
+                                    <option value="Bependa">Bependa</option>
+                                    <option value="Yassa">Yassa</option>
+                                    <option value="Pk12">PK12</option>
                                 </select>
                             </div>
                             <div>
@@ -118,8 +137,19 @@ export default function Hereo() {
                                     onChange={e => setData('type', e.target.value)}
                                 >
                                     <option value="">Typologie</option>
-                                    <option value="villa">Villa</option>
-                                    <option value="penthouse">Penthouse</option>
+                                    <option value="T">T0</option>
+                                    <option value="T1">T1</option>
+                                    <option value="T1bis">T1 Bis</option>
+                                    <option value="T2">T2</option>
+                                    <option value="T3">T3</option>
+                                    <option value="T4">T4</option>
+                                    <option value="T5">T5</option>
+                                    <option value="penthouse">Résidentiel</option>
+                                    <option value="penthouse">Professionel</option>
+                                    <option value="penthouse">Duplex</option>
+                                    <option value="penthouse">Triplex</option>
+                                    <option value="Penthouse">Penthouse</option>
+                                    <option value="Villa">Villa</option>
                                 </select>
                             </div>
                             <div>
@@ -129,8 +159,10 @@ export default function Hereo() {
                                     onChange={e => setData('price', e.target.value)}
                                 >
                                     <option value="">Prix</option>
-                                    <option value="villa">Villa</option>
-                                    <option value="penthouse">Penthouse</option>
+                                    <option value="10">10 - 50000 FCFA</option>
+                                    <option value="50000">50000 - 100000 FCFA</option>
+                                    <option value="100000">100000 - 150000 FCFA</option>
+                                    <option value="150000">150000+ FCFA</option>
                                 </select>
                             </div>
 
