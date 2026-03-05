@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Inertia\Inertia;
 use App\Models\Loyers;
+use App\Models\Annonce;
 use Illuminate\Http\Request;
 
 class LoyersController extends Controller
@@ -14,6 +15,7 @@ class LoyersController extends Controller
 
         return Inertia::render("Dashboard", [
             'properties' => Loyers::latest()->get(),
+            'annonces' => Annonce::latest()->get(),
             'stats' => [
                 'total' => Loyers::count(),
                 'forSale' => Loyers::where('status', 'A Vendre')->count(),
@@ -55,4 +57,5 @@ class LoyersController extends Controller
 
         return redirect()->back()->with('message', 'Propriété ajoutée !');
     }
+
 }

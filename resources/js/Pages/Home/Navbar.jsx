@@ -26,6 +26,10 @@ export default function Navbar() {
                             Propiétés
                         </Link>
 
+                        <Link href={route('annonces')} className="hover:text-orange-500 transition-colors">
+                            Annonces
+                        </Link>
+
                         <Link href="#about" className="hover:text-orange-500 transition-colors">
                             A Propos
                         </Link>

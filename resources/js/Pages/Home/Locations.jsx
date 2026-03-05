@@ -1,12 +1,18 @@
+import { router } from "@inertiajs/react";
+
 export default function Locations() {
     const LOCATIONS = [
-        { name: 'Appartement/Studios', icon: '🏙️', count: 45, slug: 'apparts', bg: 'images/ap.jpg' },
+        { name: 'Appartement/Studios', icon: '🏙️', count: 45, slug: 'residentiel', bg: 'images/ap.jpg' },
         { name: 'Chambres', icon: '🛏️', count: 32, slug: 'chambres', bg: 'images/ch.jpg' },
         { name: 'Meublés', icon: '🛋️', count: 32, slug: 'meubles', bg: 'images/mb.png' },
-        { name: 'Bureaux/Espaces commerciales', icon: '💼', count: 32, slug: 'bureaux', bg: 'images/bc.png' },
+        { name: 'Bureaux/Espaces commerciales', icon: '💼', count: 32, slug: 'professionnel', bg: 'images/bc.png' },
         { name: 'Hôtel/Motels', icon: '🏨', count: 32, slug: 'hotel', bg: 'images/ht.png' },
-        { name: 'Maisons', icon: '🏠', count: 32, slug: 'maisons', bg: 'images/ms.jpg' },
+        { name: 'Maisons', icon: '🏠', count: 32, slug: 'Villa', bg: 'images/ms.jpg' },
     ];
+
+    const handleFilter = (type) => {
+        router.get(route('properties.index'), { type: type });
+    };
 
     return (
         <section className="py-20 bg-neutral-900" id="">
@@ -23,7 +29,7 @@ export default function Locations() {
             </div>
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-6 lg:grid-cols-6 gap-6">
                 {LOCATIONS.map((loc) => (
-                    <button key={loc.slug} className="location-filter-btn group relative overflow-hidden rounded-2xl h-40 sm:h-48 border border-neutral-700 hover:border-orange-500 transition-all" style={{ backgroundImage: `url('${loc.bg}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <button onClick={() => handleFilter(loc.slug)} key={loc.slug} className="location-filter-btn group relative overflow-hidden rounded-2xl h-40 sm:h-48 border border-neutral-700 hover:border-orange-500 transition-all block w-full" style={{ backgroundImage: `url('${loc.bg}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-left">
                             <span className="text-2xl">{loc.icon}</span>

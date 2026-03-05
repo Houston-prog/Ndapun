@@ -34,6 +34,7 @@ export default function Hereo() {
     // Gestion du formulaire de recherche avec Inertia
     const { data, setData, get } = useForm({
         location: '',
+        locality: '',
         type: '',
         price: '',
     });
@@ -113,7 +114,7 @@ export default function Hereo() {
                             <div>
                                 <select
                                     className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:border-orange-500 outline-none"
-                                    value={data.type}
+                                    value={data.locality}
                                     onChange={e => setData('locality', e.target.value)}
                                 >
                                     <option value="">Quartier</option>
@@ -144,10 +145,10 @@ export default function Hereo() {
                                     <option value="T3">T3</option>
                                     <option value="T4">T4</option>
                                     <option value="T5">T5</option>
-                                    <option value="penthouse">Résidentiel</option>
-                                    <option value="penthouse">Professionel</option>
-                                    <option value="penthouse">Duplex</option>
-                                    <option value="penthouse">Triplex</option>
+                                    <option value="residentiel">Résidentiel</option>
+                                    <option value="professionnel">Professionel</option>
+                                    <option value="duplex">Duplex</option>
+                                    <option value="triplex">Triplex</option>
                                     <option value="Penthouse">Penthouse</option>
                                     <option value="Villa">Villa</option>
                                 </select>
@@ -155,7 +156,7 @@ export default function Hereo() {
                             <div>
                                 <select
                                     className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:border-orange-500 outline-none"
-                                    value={data.type}
+                                    value={data.price}
                                     onChange={e => setData('price', e.target.value)}
                                 >
                                     <option value="">Prix</option>

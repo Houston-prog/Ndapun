@@ -7,15 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Properties extends Model
 {
     protected $fillable = [
-        'title', 
+        'title',
         'description',
+        'price',
+        'type',
         'status',
         'location',
         'locality',
         'bedrooms',
         'bathrooms',
         'area',
-        'description',
         'contact',
         'name',
         'images',
@@ -24,6 +25,6 @@ class Properties extends Model
     // Pour transformer automatiquement le tableau d'images JSON en Array PHP
     protected $casts = [
         'images' => 'array',
-        'price'=> 'decimal:2',
+        'price' => 'decimal:2',
     ];
 }
